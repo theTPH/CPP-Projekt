@@ -13,5 +13,5 @@ class Attributes
         void set_health(int);
         int get_health();
         void set_dexterty(int); 
-        int get_decterty();
-}
+        int get_dexterty();
+};
