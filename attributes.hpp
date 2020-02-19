@@ -8,6 +8,8 @@ class Attributes
     
     public:
         Attributes(int, int, int);
+        void initial_attribute_select();
+        //get and set
         void set_strenght(int);
         int get_strength();
         void set_health(int);
