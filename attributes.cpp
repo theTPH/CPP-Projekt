@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stdlib.h>
+#include<typeinfo>
 #include<windows.h>
 #include "attributes.hpp"
 using namespace std;
@@ -53,7 +54,7 @@ void Attributes::initial_attribute_select()
     answer_valid = false;
     while (!finished_process)
     {
-        cout << "Du kannst insgesammt" << max_attributes << " Attributspunkte vergeben. Die in diesem Abenteuer verwendeten Attribute sind:" << endl;
+        cout << "Du kannst insgesammt " << max_attributes << " Attributspunkte vergeben. Die in diesem Abenteuer verwendeten Attribute sind:" << endl;
         cout << "Staerke: Dieses Attribut bestimmt deinen Schaden im Kampf." << endl;
         cout << "Lebenskraft: Bestimmt die Anzahl deiner Lebenspunkte (LE*3)" << endl;
         cout << "Geschicklichkeit: Beinflusst deine Position im Kampf und die Moeglichkeit Gefahren auszuweichen" << endl;
@@ -62,28 +63,39 @@ void Attributes::initial_attribute_select()
         {
             cout << "Gib jetzt bitte deine Staerke ein. [1 bis 8]" << endl;
             cin >> strength;
-            if (strength > 1 && strength < 8)
+            if(cin.fail())
+            {
+                cin.clear();
+                cin.ignore(); //removes the bad input without that the input loops infinite -> took some time to find that
+                cout << "Deine Eingabe war leider ungueltig. Bitte gebe eine Zahl von 1-8 ein." << endl;
+            }else if (strength >= 1 && strength <= 8)
             {
                 cout << "Staerke: " << strength << endl;
                 points_valid = true;
             }else
             {
-                cout << "Deine Eingabe war leider ungültig. Bitte gebe eine Zahl von 1-8 ein." << endl;
+                cout << "Deine Eingabe war leider ungueltig. Bitte gebe eine Zahl von 1-8 ein." << endl;
             }
         }
         points_valid = false;
         while (!points_valid)
-        {
+        {   
             cout << "Gib jetzt bitte deine Lebenskraft ein. [1 bis " << max_attributes - strength - 1 << "]" << endl;
             cin >> health;
-            if (health > 1 && health < max_attributes - strength - 1)
+            if(cin.fail())
             {
-                cout << "Lebenskraft: " << health << "Daraus resultierende Lebenspunkte: " << health * 3 << endl;
+                cin.clear();
+                cin.ignore(); //removes the bad input without that the input loops infinite -> took some time to find that
+                cout << "Deine Eingabe war leider ungueltig. Bitte gebe eine Zahl von 1-8 ein." << endl;
+            
+            }else if (health >= 1 && health <= max_attributes - strength - 1)
+            {
+                cout << "Lebenskraft: " << health << " Daraus resultierende Lebenspunkte: " << health * 3 << endl;
                 livepoints = health * 3; 
                 points_valid = true;
             }else
             {
-                cout << "Deine Eingabe war leider ungültig. Bitte gebe eine Zahl von 1-"<< max_attributes - strength - 1 << " ein." << endl;
+                cout << "Deine Eingabe war leider ungueltig. Bitte gebe eine Zahl von 1-"<< max_attributes - strength - 1 << " ein." << endl;
             }      
         }
         points_valid = false;
@@ -96,7 +108,7 @@ void Attributes::initial_attribute_select()
         cout << "Geschicklichkeit: " << dexterty << endl;
         while(!answer_valid)
         {
-            cout << "Punkteverteilung bestätigen? [J ; N]" << endl;
+            cout << "Punkteverteilung bestaetigen? [J ; N]" << endl;
             cin >> answer_conf;
             if (answer_conf == "J" || answer_conf == "j")
             {
