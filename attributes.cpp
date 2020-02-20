@@ -11,6 +11,7 @@ Attributes::Attributes(int strength, int health, int dexterty)
      this->strength = strength;
      this->health = health;
      this->dexterty = dexterty;
+     this->livepoints = health * 3;
  }
 
 
@@ -172,11 +173,12 @@ int Attributes::get_livepoints()
 
 
 
-
+/*
 int main()
 {
     Attributes attr = Attributes(0, 0, 0);
     attr.initial_attribute_select();
     cout << attr.get_strength() << attr.get_health() << attr.get_livepoints() << attr.get_dexterty() << endl;
-    Sleep(1000000);
+    Sleep(1000);
 }
+*/

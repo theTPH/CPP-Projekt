@@ -1,5 +1,3 @@
-#include "character.hpp"
-#include "attributes.hpp"
 #include "combat.hpp"
 #include<iostream>
 
@@ -9,24 +7,27 @@ Combat::Combat(Character player, Character enemy)
     this->enemy = enemy;
 }
 
-void execute_comba(Character player, Character enemy)
+void Combat::execute_combat()
 {   
-    int p_health = player.get_attributes().get_livepoints();
-    int e_health = enemy.get_attributes().get_livepoints();
+    int p_health = this->player.get_attributes().get_livepoints();
+    int e_health = this->enemy.get_attributes().get_livepoints();
     string move = "";
     bool anser_valid = false;
 
     while (p_health != 0 || e_health != 0)
     {
+        int p_health = this->player.get_attributes().get_livepoints();
+        int e_health = this->enemy.get_attributes().get_livepoints();
+
         cout << player.get_name() << " du bist am Zug." << endl;
         while(!anser_valid)
         {
             cout << "Du kannst versuchen anzugreifen [A] oder versuchen zu fliehen [F]." << endl;
             cin >> move;
         
-            if (move == "M" || move == "m")
+            if (move == "A" || move == "a")
             {
-                //attack action
+                attack(player, enemy);
                 anser_valid = true;
             }else if (move == "F" || move == "f")
             {
@@ -41,15 +42,38 @@ void execute_comba(Character player, Character enemy)
     }
 }
 
-void main()
+void Combat::attack(Character attacker, Character defender)
 {
-    Attributes att_player = Attributes(2,4,4);
-    Attributes att_enemy = Attributes(3,3,3);
-    Character player = Character(att_player, "player");
-    Character enemy = Character(att_enemy, "enemy");
+    int damage = attacker.get_attributes().get_strength() + rand() %3 + 1; //last part creates random number between 1 and 3
+    cout << "Der Angriff verursacht " << damage << " Schaden!" << endl;
+    int rem_health = defender.get_attributes().get_livepoints() - damage;
+    if (rem_health <= 0)
+    {
+        if (defender.get_name() == this->player.get_name())
+        {
+            cout << "Oh NEIN ...du wurdest besiegt...Tja du wirst wohl noch mal von Vorne anfangen müssen" << endl;
+            this->player.get_attributes().set_livepoints(0); //will this work? o.O
+            //player dead --> what do we do here?
+        }else
+        {
+            cout << "Du hast " << this->enemy.get_name() << " besiegt!" << endl;
+            this->enemy.get_attributes().set_livepoints(0);
+            //enemy dead -> anything happens?
+        }
+        
+    }else
+    {
+        if (defender.get_name() == this->player.get_name())
+        {
 
-    Combat comb = Combat(player, enemy);
-    comb.execute_combat(player, enemy);
+        }else
+        {
+            cout << defender.get_attributes().get_livepoints();
+            this->enemy.get_attributes().set_livepoints(rem_health);
+            cout << defender.get_attributes().get_livepoints() << endl;
+            cout << "Verbleibende Lebenspunkte " << rem_health << endl;
+        }
+    }
 }
 
 Character Combat::get_player()

@@ -1,5 +1,4 @@
 #include "character.hpp"
-#include "attributes.hpp"
 
 class Combat
 {
@@ -8,7 +7,8 @@ class Combat
         Character enemy;
     public:
         Combat(Character, Character); // 1v1
-        void execute_combat(Character, Character);
+        void execute_combat();
+        void attack(Character, Character);
         Character get_player();
         Character get_enemy();
 };

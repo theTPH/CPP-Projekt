@@ -1,4 +1,3 @@
-#include "attributes.hpp"
 #include "character.hpp"
 
 //constructors
