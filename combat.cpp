@@ -14,27 +14,47 @@ void Combat::execute_combat()
     bool anser_valid = false;
 
     while (!combat_over)
-    {
-        cout << player.get_name() << " du bist am Zug." << endl;
-        while(!anser_valid)
+    {   
+        //players turn
+        if (player.get_attributes().get_health() > 0)
         {
-            cout << "Du kannst versuchen anzugreifen [A] oder versuchen zu fliehen [F]." << endl;
-            cin >> move;
-        
-            if (move == "A" || move == "a")
+            cout << player.get_name() << " du bist am Zug." << endl;
+            while(!anser_valid)
             {
-                anser_valid = true;
-                combat_over = attack(player, enemy);        
-            }else if (move == "F" || move == "f")
-            {
-                anser_valid = true;
-                combat_over = escape();
-            }else
-            {
-                cout << "Deine Eingabe war leider ungueltig. Bitte gebe 'A' oder 'F' ein." << endl;
+                cout << "Du kannst versuchen anzugreifen [A] oder versuchen zu fliehen [F]." << endl;
+                cin >> move;
+            
+                if (move == "A" || move == "a")
+                {
+                    anser_valid = true;
+                    combat_over = attack(player, enemy);        
+                }else if (move == "F" || move == "f")
+                {
+                    anser_valid = true;
+                    combat_over = escape();
+                }else
+                {
+                    cout << "Deine Eingabe war leider ungueltig. Bitte gebe 'A' oder 'F' ein." << endl;
+                }
             }
+            anser_valid = false;
+        }else
+        {
+            combat_over = true;
         }
-        anser_valid = false;
+        
+        //enemys turn
+        if (enemy.get_attributes().get_health() > 0)
+        {
+            cout << enemy.get_name() << " ist am Zug." << endl;
+            attack(enemy, player);
+        }else
+        {
+            combat_over=true;
+        }
+        
+        
+
     }
 }
 

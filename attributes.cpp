@@ -58,7 +58,7 @@ void Attributes::initial_attribute_select()
         cout << "Du kannst insgesammt " << max_attributes << " Attributspunkte vergeben. Die in diesem Abenteuer verwendeten Attribute sind:" << endl;
         cout << "Staerke: Dieses Attribut bestimmt deinen Schaden im Kampf." << endl;
         cout << "Lebenskraft: Bestimmt die Anzahl deiner Lebenspunkte (LE*3)" << endl;
-        cout << "Geschicklichkeit: Beinflusst deine Position im Kampf und die Moeglichkeit Gefahren auszuweichen" << endl;
+        cout << "Geschicklichkeit: Beinflusst deine Chance aus einem Kampf zu fliehen und die Moeglichkeit Gefahren auszuweichen" << endl;
         
         while(!points_valid)
         {
@@ -168,17 +168,3 @@ int Attributes::get_livepoints()
 {
     return this->livepoints;
 }
-
-
-
-
-
-/*
-int main()
-{
-    Attributes attr = Attributes(0, 0, 0);
-    attr.initial_attribute_select();
-    cout << attr.get_strength() << attr.get_health() << attr.get_livepoints() << attr.get_dexterty() << endl;
-    Sleep(1000);
-}
-*/
