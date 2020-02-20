@@ -1,4 +1,6 @@
 #include<iostream>
+#include<stdlib.h>
+#include<windows.h>
 #include "attributes.hpp"
 using namespace std;
 
@@ -21,35 +23,42 @@ void Attributes::initial_attribute_select()
     int health = 0;
     int dexterty = 0;
     bool points_valid = false;
+    bool answer_att_valid = false;
     string answer_att = "";
 
     cout << "Heyho herzlich Willkommen in deinem Abenteuer!" << endl;
-    cout << "Gleich kann es los gehen. Doch bevor du dich in dein Abenteuer stürzen kannst musst du noch deine Attributspunkte verteilen." << endl;
-    cout << "Was Attributspunkte sind weißt du doch oder? [ J ; N ]" << endl;
-    cin >> answer_att;
-    if (answer_att.compare("J") || answer_att.compare("j"))
+    Sleep(3000);
+    cout << "Gleich kann es los gehen. Doch bevor du dich in dein Abenteuer stuerzen kannst musst du noch deine Attributspunkte verteilen." << endl;
+    while(!answer_att_valid)
     {
-        cout << "Super! Dann legen wir direkt los." << endl;
-    }else if (answer_att.compare("N") ||  answer_att.compare("j"))
-    {
-        cout << "Okay. Attribute beschreiben die Kernkompetenzen deines Charakters." << endl;
-        cout << "Mithilfe von Attributspunkten kannst du diese Attribute steigern." << endl;
-    }else
-    {
-        cout << "Deine Eingabe war leider ungültig. Bitte gebe 'J' für Ja oder 'N' für Nein ein." << endl;
+        cout << "Was Attributspunkte sind weisst du doch oder? [ J ; N ]" << endl;
+        cin >> answer_att;
+        if (answer_att == "J" || answer_att == "j")
+        {
+            cout << "Super! Dann legen wir direkt los." << endl;
+            answer_att_valid = true;
+        }else if (answer_att == "N" ||  answer_att == "n")
+        {
+            cout << "Okay. Attribute beschreiben die Kernkompetenzen deines Charakters." << endl;
+            cout << "Mithilfe von Attributspunkten kannst du diese Attribute steigern." << endl;
+            answer_att_valid = true;
+        }else
+        {
+            cout << "Deine Eingabe war leider ungültig. Bitte gebe 'J' fuer Ja oder 'N' fuer Nein ein." << endl;
+        }
     }
-    cout << "Du kannst insgesammt" << max_attributes << " Abenteuerpunkte vergeben. Die in diesem Abenteuer verwendeten Attribute sind:" << endl;
-    cout << "Stärke: Dieses Attribut bestimmt deinen Schaden im Kampf." << endl;
+    cout << "Du kannst insgesammt" << max_attributes << " Attributspunkte vergeben. Die in diesem Abenteuer verwendeten Attribute sind:" << endl;
+    cout << "Staerke: Dieses Attribut bestimmt deinen Schaden im Kampf." << endl;
     cout << "Lebenskraft: Bestimmt die Anzahl deiner Lebenspunkte (LE*3)" << endl;
-    cout << "Geschicklichkeit: Beieinflusst deine Position im Kampf und die Möglichkeit Gefahren auszuweichen" << endl;
-    cout << "Gib jetzt bitte deine Stärke ein [1 bis 8]" << endl;
+    cout << "Geschicklichkeit: Beinflusst deine Position im Kampf und die Moeglichkeit Gefahren auszuweichen" << endl;
+    cout << "Gib jetzt bitte deine Staerke ein [1 bis 8]" << endl;
     cin >> strength;
     if (strength > 1 && strength < 8)
     {
         cout << "Stärke: " << strength << endl;
     }else
     {
-        cout << "Deine EIngabe war leider ungültig. Bitte gebe eine Zahl von 1-8 ein." << endl;
+        cout << "Deine Eingabe war leider ungültig. Bitte gebe eine Zahl von 1-8 ein." << endl;
     }
     
     
