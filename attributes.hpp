@@ -5,6 +5,7 @@ class Attributes
         int strength = 0;
         int health = 0;
         int dexterty = 0;
+        int livepoints = 0;
     
     public:
         Attributes(int, int, int);
@@ -16,4 +17,6 @@ class Attributes
         int get_health();
         void set_dexterty(int); 
         int get_dexterty();
+        void set_livepoints(int);
+        int get_livepoints();
 };
