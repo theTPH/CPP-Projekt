@@ -1,6 +1,7 @@
 #include "attributes.hpp"
 #include "character.hpp"
 
+//constructors
 Character::Character()
 {
     Attributes attr = Attributes(0, 0, 0);
@@ -13,12 +14,19 @@ Character::Character(Attributes attr, string name)
     this->name = name;
 }
 
+
+// get and set
 void Character::set_attributes(Attributes attr)
 {
     this->attributes = attr;
 }
 
-int Character::get_attributes()
+Attributes Character::get_attributes()
 {
-    return this->get_attributes;
+    return this->attributes;
+}
+
+string Character::get_name()
+{
+    return this->name;
 }

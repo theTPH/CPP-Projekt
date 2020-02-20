@@ -12,5 +12,6 @@ class Character
     Character(Attributes, string);
     // get and set
     void set_attributes(Attributes);
-    int get_attributes();
+    Attributes get_attributes();
+    string get_name();
 };
