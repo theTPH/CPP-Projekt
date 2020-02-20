@@ -8,7 +8,8 @@ class Combat
     public:
         Combat(Character, Character); // 1v1
         void execute_combat();
-        void attack(Character, Character);
+        bool attack(Character, Character);
+        bool escape();
         Character get_player();
         Character get_enemy();
 };
