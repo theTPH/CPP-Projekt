@@ -177,4 +177,6 @@ int main()
 {
     Attributes attr = Attributes(0, 0, 0);
     attr.initial_attribute_select();
+    cout << attr.get_strength() << attr.get_health() << attr.get_livepoints() << attr.get_dexterty() << endl;
+    Sleep(1000000);
 }
