@@ -2,13 +2,14 @@
 class Attributes
 {
     private:
-        int strength = 0;
-        int health = 0;
-        int dexterty = 0;
-        int livepoints = 0;
+        int strength;
+        int health;
+        int dexterty;
+        int livepoints;
     
     public:
         Attributes(int, int, int);
+        Attributes(int, int, int, int);
         void initial_attribute_select();
         //get and set
         void set_strenght(int);

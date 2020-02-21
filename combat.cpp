@@ -1,5 +1,6 @@
 #include "combat.hpp"
 #include<iostream>
+#include<windows.h>
 
 Combat::Combat(Character player, Character enemy)
 {
@@ -16,7 +17,7 @@ void Combat::execute_combat()
     while (!combat_over)
     {   
         //players turn
-        if (player.get_attributes().get_health() > 0)
+        if (this->player.get_attributes().get_health() > 0)
         {
             cout << player.get_name() << " du bist am Zug." << endl;
             while(!anser_valid)
@@ -44,10 +45,10 @@ void Combat::execute_combat()
         }
         
         //enemys turn
-        if (enemy.get_attributes().get_health() > 0)
+        if (this->enemy.get_attributes().get_health() > 0)
         {
             cout << enemy.get_name() << " ist am Zug." << endl;
-            attack(enemy, player);
+            combat_over = attack(enemy, player);
         }else
         {
             combat_over=true;
@@ -71,13 +72,15 @@ bool Combat::attack(Character attacker, Character defender)
         if (defender.get_name() == this->player.get_name())
         {
             cout << "Oh NEIN ...du wurdest besiegt...Tja du wirst wohl noch mal von Vorne anfangen müssen" << endl;
-            this->player.get_attributes().set_livepoints(0); //will this work? o.O
+            Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), 0);
+            this->player.set_attributes(attr);
             combat_over = true;
             //player dead --> what do we do here?
         }else
         {
             cout << "Du hast " << this->enemy.get_name() << " besiegt!" << endl;
-            this->enemy.get_attributes().set_livepoints(0);
+            Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), 0);
+            this->enemy.set_attributes(attr);
             combat_over = true;
             //enemy dead -> anything happens?
         }
@@ -86,12 +89,13 @@ bool Combat::attack(Character attacker, Character defender)
     {
         if (defender.get_name() == this->player.get_name())
         {
-
+            Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), rem_health);
+            this->player.set_attributes(attr);
+            cout << "Verbleibende Lebenspunkte " << rem_health << endl;
         }else
         {
-            cout << defender.get_attributes().get_livepoints() << endl;
-            defender.get_attributes().set_livepoints(2);
-            cout << defender.get_attributes().get_livepoints() << endl;
+            Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), rem_health);
+            this->enemy.set_attributes(attr);
             cout << "Verbleibende Lebenspunkte " << rem_health << endl;
         }
     }

@@ -13,7 +13,13 @@ Attributes::Attributes(int strength, int health, int dexterty)
      this->dexterty = dexterty;
      this->livepoints = health * 3;
  }
-
+Attributes::Attributes(int strength, int health, int dexterty, int lifepoints)
+{
+    this->strength = strength;
+     this->health = health;
+     this->dexterty = dexterty;
+     this->livepoints = lifepoints;
+}
 
 //methods
 void Attributes::initial_attribute_select()
