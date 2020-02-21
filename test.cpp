@@ -14,5 +14,6 @@ int main()
     Character enemy = Character(att_enemy, "enemy");
 
     Combat comb = Combat(player, enemy);
-    comb.execute_combat();
+    bool win = false;
+    win = comb.execute_combat();
 }

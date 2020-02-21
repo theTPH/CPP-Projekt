@@ -8,9 +8,10 @@ Combat::Combat(Character player, Character enemy)
     this->enemy = enemy;
 }
 
-void Combat::execute_combat()
+bool Combat::execute_combat()
 {   
     bool combat_over = false;
+    bool combat_result = false; //false = player lsot
     string move = "";
     bool anser_valid = false;
 
@@ -52,11 +53,13 @@ void Combat::execute_combat()
         }else
         {
             combat_over=true;
+            combat_result = true;
         }
         
         
 
     }
+    return combat_result;
 }
 
 bool Combat::attack(Character attacker, Character defender)
@@ -71,7 +74,7 @@ bool Combat::attack(Character attacker, Character defender)
     {
         if (defender.get_name() == this->player.get_name())
         {
-            cout << "Oh NEIN ...du wurdest besiegt...Tja du wirst wohl noch mal von Vorne anfangen müssen" << endl;
+            cout << "Oh NEIN ...du wurdest besiegt...Tja du wirst wohl noch mal von Vorne anfangen muessen" << endl;
             Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), 0);
             this->player.set_attributes(attr);
             combat_over = true;

@@ -7,7 +7,7 @@ class Combat
         Character enemy;
     public:
         Combat(Character, Character); // 1v1
-        void execute_combat();
+        bool execute_combat();
         bool attack(Character, Character);
         bool escape();
         Character get_player();
