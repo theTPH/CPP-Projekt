@@ -45,7 +45,7 @@ void Combat::execute_combat()
         }
         
         //enemys turn
-        if (this->enemy.get_attributes().get_health() > 0)
+        if (this->enemy.get_attributes().get_livepoints() > 0)
         {
             cout << enemy.get_name() << " ist am Zug." << endl;
             combat_over = attack(enemy, player);
