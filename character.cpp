@@ -77,6 +77,7 @@ void Character::level_up_system(int xp)
     {
         cout << "Glueckwunsch! du hast " << xp << " Erfahrungspunkte verdient." << endl;
         cout << "Dir fehlen noch " << this->get_xp_lvl_up() - current_xp << " Erfahrungspunkte zum naechsten LVL." << endl;
+        this->set_xp(current_xp);
     }
 }
 
