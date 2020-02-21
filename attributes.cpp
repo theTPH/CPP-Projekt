@@ -8,17 +8,18 @@ using namespace std;
 //constructor
 Attributes::Attributes(int strength, int health, int dexterty)
  {
-     this->strength = strength;
-     this->health = health;
-     this->dexterty = dexterty;
-     this->livepoints = health * 3;
+    this->strength = strength;
+    this->health = health;
+    this->dexterty = dexterty;
+    this->livepoints = health * 3;
  }
+
 Attributes::Attributes(int strength, int health, int dexterty, int lifepoints)
 {
     this->strength = strength;
-     this->health = health;
-     this->dexterty = dexterty;
-     this->livepoints = lifepoints;
+    this->health = health;
+    this->dexterty = dexterty;
+    this->livepoints = lifepoints;
 }
 
 //methods
@@ -139,6 +140,14 @@ void Attributes::initial_attribute_select()
     }
 }
 
+void Attributes::print_attributes()
+{
+    cout << "Deine Attribute sind momentan:" << endl;
+    cout << "Staerke: " << this->get_strength() << endl;
+    cout << "Lebenskraft: " << this->get_health() << endl;
+    cout << "Lebenspunkte: " << this->get_livepoints() << endl;
+    cout << "Geschicklichkeit: " << this->get_dexterty() << endl;
+}
 
 //get and set methods
 void Attributes::set_strenght(int strength)

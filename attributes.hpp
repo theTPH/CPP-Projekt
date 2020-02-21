@@ -1,4 +1,3 @@
-
 class Attributes
 {
     private:
@@ -8,9 +7,12 @@ class Attributes
         int livepoints;
     
     public:
+        //constructors
         Attributes(int, int, int);
         Attributes(int, int, int, int);
+        //methods
         void initial_attribute_select();
+        void print_attributes();
         //get and set
         void set_strenght(int);
         int get_strength();

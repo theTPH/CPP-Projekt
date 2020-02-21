@@ -9,12 +9,13 @@ class Character
         string name;    
         int xp;
         int xp_lvl_up;
+        int lvl;
     public:
     //constructors
     Character();
     Character(Attributes, string);
     //methods
-    void level_up_system();
+    void level_up_system(int);
     // get and set
     void set_attributes(Attributes);
     Attributes get_attributes();
@@ -23,5 +24,7 @@ class Character
     int get_xp();
     void set_xp_lvl_up(int);
     int get_xp_lvl_up();
+    void set_lvl(int);
+    int get_lvl();
 
 };
