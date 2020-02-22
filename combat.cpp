@@ -10,8 +10,12 @@ Combat::Combat(Character player, Character enemy)
 
 bool Combat::execute_combat()
 {   
+    /*
+    This is the main method to execute a combat situation. It defines the turn order and tells when the combat is over.
+    returns combat_result: bool - the result of the combat situation false -> player dead; true -> player won
+    */
     bool combat_over = false;
-    bool combat_result = false; //false = player lsot
+    bool combat_result = false; //false = player lost combat
     string move = "";
     bool anser_valid = false;
 
@@ -55,15 +59,18 @@ bool Combat::execute_combat()
             combat_over=true;
             combat_result = true;
         }
-        
-        
-
     }
     return combat_result;
 }
 
 bool Combat::attack(Character attacker, Character defender)
 {   
+    /*
+    Attack method that can be used by the player and the enemy. Damage dealt will be handeld here.
+    param attacker: Character - the player / npc that attacks
+    param defender: Character - the player / npc that is attacked
+    returns combat_over: bool - true-> player or npc is dead; false -> the combat continues
+    */
     bool combat_over = false;
     int damage = attacker.get_attributes().get_strength() + rand() %3 + 1; //last part creates random number between 1 and 3
 
@@ -78,14 +85,12 @@ bool Combat::attack(Character attacker, Character defender)
             Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), 0);
             this->player.set_attributes(attr);
             combat_over = true;
-            //player dead --> what do we do here?
         }else
         {
             cout << "Du hast " << this->enemy.get_name() << " besiegt!" << endl;
             Attributes attr = Attributes(defender.get_attributes().get_strength(), defender.get_attributes().get_health(), defender.get_attributes().get_dexterty(), 0);
             this->enemy.set_attributes(attr);
             combat_over = true;
-            //enemy dead -> anything happens?
         }
         
     }else
@@ -107,6 +112,11 @@ bool Combat::attack(Character attacker, Character defender)
 
 bool Combat::escape()
 {   
+    /*
+    Method for the escape skill check. Players dexterty + w3 mus be greater then enemys dexterty +w3.
+    Enemys cant use this action.
+    returns combat_over: bool - true -> player escaped; false ->player stays in combat
+    */
     bool combat_over = false;
     int escape_value = this->player.get_attributes().get_dexterty()  + rand() %3 + 1;
     int grab_value = this->enemy.get_attributes().get_dexterty() + rand() %3 + 1;

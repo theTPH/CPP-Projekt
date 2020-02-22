@@ -23,9 +23,14 @@ Character::Character(Attributes attr, string name)
 //methods
 void Character::level_up_system(int xp)
 {
+    /*
+    This is the method for the level up system in the game. It can be called wehnever the player gets experience.
+    The method ads that experience and checks if a level up available.
+    params xp: int - amount of xp given to the character
+    */
     int current_xp = this->get_xp() + xp;
     int lvl =  this->get_lvl();
-    int xp_lvl_up = this->get_xp_lvl_up() + 50;
+    int xp_lvl_up = this->get_xp_lvl_up() + 50; //sets the amount of xp needed for next lvl up
     bool answer_valid = false;
     string answer = "";
 

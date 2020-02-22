@@ -5,7 +5,7 @@
 #include "attributes.hpp"
 using namespace std;
 
-//constructor
+//constructors
 Attributes::Attributes(int strength, int health, int dexterty)
  {
     this->strength = strength;
@@ -25,6 +25,10 @@ Attributes::Attributes(int strength, int health, int dexterty, int lifepoints)
 //methods
 void Attributes::initial_attribute_select()
 {
+    /*
+    This method is used for the initial attribute select at the beginning of the game.
+    The player can select his sreangth, health and dexterty value.
+    */
     int max_attributes = 10;
     int all_attributes = 0;
     int attributes_left = 0;
@@ -33,13 +37,13 @@ void Attributes::initial_attribute_select()
     int dexterty = 0;
     int livepoints = 0;
     bool points_valid = false;
-    bool answer_valid = false;
+    bool answer_valid = false; // used for user input checks
     bool finished_process = false;
     string answer_att = "";
     string answer_conf = "";
 
     cout << "Heyho herzlich Willkommen in deinem Abenteuer!" << endl;
-    //Sleep(3000); damit könnte man den Text verzögern
+    //Sleep(3000); method to slow down text output and make it more rpg like
     cout << "Gleich kann es los gehen. Doch bevor du dich in dein Abenteuer stuerzen kannst musst du noch deine Attributspunkte verteilen." << endl;
     while(!answer_valid)
     {
@@ -142,6 +146,9 @@ void Attributes::initial_attribute_select()
 
 void Attributes::print_attributes()
 {
+    /*
+    Prints out all attributes.
+    */
     cout << "Deine Attribute sind momentan:" << endl;
     cout << "Staerke: " << this->get_strength() << endl;
     cout << "Lebenskraft: " << this->get_health() << endl;
