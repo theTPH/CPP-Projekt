@@ -1,0 +1,112 @@
+### Fischerdorf ###
+
+//Taverne
+EV1
+Euer letztes Abenteuer sitzt euch noch in den Knochen. Nach einem langen Marsch kommt ihr endlich im vertraeumten und idyllischen Doerfchen Klorkelrueck an. Die Vorbereitungen fuer das alljaehrliche Fischerfest scheinen in vollem Gange zu sein. Ein fahrender Haendler hat euch von diesen Festivitaeten berichtet. Ihr habt kaum Zeit euch auf dem beschaulichen Dorfplatz umzusehen, da kommt auch schon einer der freundlichen Dorfbewohner auf euch zu und laed euch ein an den Feierlichkeiten in der oertlichen Taverne teilzunehmen. Das lasst Ihr euch natuerlich nicht zweimal sagen und betretet sogleich die Taverne #Zum betrunkenen Kraken# !
+0
+LOC
+1
+1
+
+EV2
+Du trittst etwas naeher an den Tisch heran. Es herrscht ausgelassene Stimmung und es gibt niemanden, der keinen stattlichen Bierkrug in der Hand haelt. Bis auf Euch! So bleibt Ihr nicht lange unbemerkt. Einer der Maenner nickt euch freundlich zu: "Heda, Ihr dort! Schnappt euch einen Krug und nehmt Platz! Die Runde geht auf mich!" Was tut Ihr?
+2
+1: Du stimmst freudig zu und schnappst dir den Krug, den man dir entgegenstreckt.
+3
+2: Du lehnst dankend ab und ziehst dich an den Tresen zurueck.
+5
+END
+
+EV3
+Ihr setzt euch an den Tisch und steigt in das Saufgelage mit ein. Aus einem spendierten Krug wird schnell der zweite, aus diesem der dritte... und irgendwie wird es auf einmal schwierig mit dem Zaehl... Aber hey, einem geschenkten Gaul... Ihr wisst schon ;) .  Irgendwann ist auch das mit dem Aufrechtsitzen nicht mehr so einfach und ihr beschliesst, euren Brummschaedel ein paar Minuten auf der Tischplatte zu goennen.
+0
+EV
+4
+0
+
+EV4
+...Aus ein paar Minuten wurde offenbar ein grosszuegiges Stuendchen. Ihr schaut euch um - einigen eurer Tischkameraden erging es wohl aehnlich. "Wo ist mein Gold?" - schreit einer der Maenner auf. Auch Ihr selbst tastet hastig in eurer Tasche herum. All euer Gold ist fort, Ihr wurdet bestohlen!
+0
+EV
+10
+0
+
+EV5
+Als Ihr Euch auf einem der Barhocker am Tresen niederlasst, hoert ihr ein leises Grummeln zu eurer Rechten. Ihr erblickt einen noch recht jungen, schlacksigen Mann. Offenbar handelt es sich um einen der hiesigen Fischer. Ein Teil seiner Schulter ist von einem nicht mehr ganz so sauberen, leicht blutigen Verband bedeckt zu sein.
+0
+EV
+6
+0
+
+EV6
+Der Mann grinst euch missmutig zu: "Eins der grossen Viecher hat mich bei der letzten Tour erwischt. Jetzt versuch ich den Schmerz in diesem Bierkrug hier zu ertraenken. Achja, mein Name ist Verian. Ihr habt nicht zufaellig was dabei, was besser hilft?"
+0
+EV
+7
+0
+
+EV7
+Tatsaechlich habt Ihr auf eurem Weg hier her am Wegesrand ein Bueschel Sonnekraut eingesammelt, das unter anderem fuer seine Wundheilungskraefte bekannt ist. Wollt ihr es dem Fischer schenken?
+2
+1: Gebt Verian das Kraut.
+8
+2: Sagt nichts und behaltet das Kraut fuer euch selbst.
+9
+END
+
+EV8
+Ihr gebt dem Fischer das Sonnenkraut aus eurer Tasche. "Ihr wollt mir das schenken? Einfach so? Vielen Dank, Ihr glaubt gar nicht wie sehr mir das weiterhilft! Also gut.. da Ihr so freundlich zu mir wart, lasst mich Euch einen Tipp geben: Solltet Ihr abseits der Festlichkeiten ein wenig abenteuerliche Abwechslung suchen, schaut unbedingt auf der Lichtung der Bestinger im Wald noerdlich von hier vorbei. Komische Viecher, aber fuer Abenteuerlustige, wie Ihr mir einer zu sein scheint, haben sie wohl immer ein paar spannende Aufgaben parat!" Hastig schnappt er sich das Kraut und verlaesst die Kneipe ... 
+0
+LOC
+1
+1
+
+EV9
+"Schade, ich hatte gehofft, jemand wie Ihr haette da vielleicht was parat. Nagut, dann lasst mich mal weiter meinen Kummer ertraenken." Mit einem tiefen Grummeln wendet er sich wieder seinem Bierkrug zu.
+0
+LOC
+1
+1
+
+EV10
+Tom der Seebaer, der Wirt der Taverne, kommt auf euch zugeschlurft, als er Eure Verwirrung bemerkt. "Ein bisschen muesst Ihr schon selbst auf euch aufpassen, bei dem Trubel hier kann ich nicht alles im Auge behalten! Ich weiss nicht, ob Euch das weiterhilft, aber vor einiger Zeit habe eine junge Dame hastig die Taverne verlassen sehen. Vielleicht gehoert sie zu dem Diebespack, das sich seit einiger Zeit hier im Wald herumtreibt. Vielleicht solltet Ihr Euch dort mal umsehen, wenn Ihr Euer Gold wiedersehen wollt und mutig genug seid." Mit einem Schulterzucken raeumt Tom die Uebereste eures Gelages ab und verschwindet dann wieder hinter den Tresen.
+0
+LOC
+1
+1
+
+// Dorfplatz
+
+
+// Kramerladen
+
+### Wald ###
+
+// Weggabelung
+EV11
+Ihr entfernt euch vom Dorftrubel und erreicht recht schnell den ausseren Waldrand. Entschlossen geht ihr tiefer in den Wald hinein. Zwar wurdet ihr bereits vor dem hier herumlungernden Diebespackgewarnt, doch zunaechst erregt etwas ganz anderes Eure Aufmerksamkeit: Ein tiefes boesartiges Knurren!
+0
+CBT
+1
+0
+
+// Hütte des Einsiedlers
+
+// Tongrube
+
+// Sumpf
+
+// Lichtung
+
+### Küste ###
+
+// Höhle
+
+// Klippen
+
+### Ende ###
+EV99
+So geht ein weiterer deiner Abenteurertage erfolgreich zu Ende! Vielen Dank fuers Spielen!
+0
+
+

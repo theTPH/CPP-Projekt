@@ -1,0 +1,9 @@
+CBT1
+Wolf
+Ein grimmiger Wolf taucht auf und fletscht die Zaehne!
+3 3 3
+
+CBT2
+XYZ
+blablabla
+4 4 4

@@ -1,0 +1,3 @@
+// Set Gold to 0
+PE1
+0

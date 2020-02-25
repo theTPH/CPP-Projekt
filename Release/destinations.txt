@@ -1,0 +1,46 @@
+### Fischerdorf ###
+
+//Taverne
+DEST1
+1: Taverne verlassen
+2
+2: Zu den hinteren Spieltischen
+3
+END
+
+// Dorfplatz
+DEST2
+1: In die Taverne gehen
+1
+2: Den Kramerladen aufsuchen
+4
+3: Das Dorf Richtung Wald verlassen
+5
+END
+
+// Spieltische in der Taverne
+DEST3
+1: Zurueck in den Hauptbereich der Taverne
+1
+2: Taverne verlassen
+2
+END
+
+// Kramerladen
+DEST4
+2
+END
+
+### Wald ###
+
+// Weggabelung
+
+DEST5
+1: Zurueck ins Dorf
+2
+2: Huette des Einsiedlers
+6
+3: Lichtung
+9
+END
+

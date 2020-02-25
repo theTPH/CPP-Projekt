@@ -1,0 +1,36 @@
+GAME_MENU
+1
+### Spielmenue ###
+1: Zurueck zum Spiel
+2: Charakterwerte anzeigen
+3: Charakter aufleveln
+4: Speichern
+5: Laden
+6: Neuen Charakter erstellen
+7: Spiel beenden
+END
+
+
+LOCATION_MENU
+2
+Was moechtest du tun?
+1: Nach Personen in der Umgebung umschauen
+2: Bewegen
+3: Nach anderen Auffaelligkeiten Ausschau halten
+4: Spielmenue oeffnen
+END
+
+DESTINATION_MENU
+3
+Wo moechtest du hin?
+END
+
+NPCS_MENU
+4
+Mit wem moechtest du sprechen?
+END
+
+POI_MENU
+5
+Was moechtest du dir genauer ansehen?
+END

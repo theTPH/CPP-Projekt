@@ -1,0 +1,18 @@
+POI1
+1: An einem grossen Tisch in der Mitte des Raumes findet offenbar ein Saufgelage statt.
+2
+END
+
+POI2
+1: Auf dem Boden scheint im Staub etwas zu glitzern.
+66
+END
+
+POI3
+END
+
+POI4
+END
+
+POI5
+END

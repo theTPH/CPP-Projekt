@@ -1,0 +1,18 @@
+NPCS1
+1: Wirt Tom, dem Seebaeren
+1
+2: Gerda, der Kaemmerin
+2
+3: Travan, dem verwundete Fischer
+3
+END
+
+NPCS3
+1: einer Gruppe von Gluecksspielern
+4
+END
+
+NPCS4
+1: Wilfred Kramer, dem Ladenbesitzer
+5
+END
