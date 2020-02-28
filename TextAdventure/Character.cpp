@@ -102,6 +102,11 @@ Attributes Character::get_attributes()
 	return this->attributes;
 }
 
+void Character::set_name(string name)
+{
+	this->name = name;
+}
+
 string Character::get_name()
 {
 	return this->name;

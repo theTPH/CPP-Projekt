@@ -156,6 +156,11 @@ void Game::createNewCharacter()
 	Attributes att_player = Attributes(0, 0, 0);
 	att_player.initial_attribute_select();
 	player_character = Character(att_player, "player");
+	std::cout << "Jetzt musst du nur noch deinen Namen eingeben!" << endl;
+	string name = "";
+	std::cin >> name;
+	player_character.set_name(name);
+	std::cout << "Alles klar " << player_character.get_name() << " Dann kann es jetzt wirklich los gehen!" << endl;
 }
 
 void Game::execute_next_action(int action_id)

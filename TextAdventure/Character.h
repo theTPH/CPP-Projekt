@@ -21,6 +21,7 @@ public:
 	// get and set
 	void set_attributes(Attributes);
 	Attributes get_attributes();
+	void set_name(string);
 	string get_name();
 	void set_xp(int);
 	int get_xp();
