@@ -1,0 +1,52 @@
+### Fischerdorf ###
+
+LOC1
+Taverne
+Du stehst inmitten einer versifften Taverne.
+END
+
+LOC2
+Dorfplatz
+Du stehst auf dem ziemlich beschaulichen Dorfplatz von Kroekelbrueck.
+END
+
+LOC3
+Hintere Spieltische der Taverne
+Hier herrscht offenbar geschaeftiges Treiben. Muenzen wechseln eifrig ihre Besitzer.
+END
+
+LOC4
+Kramerladen
+Ihr steht in einem kleinen, aber feinen Gemischtwarenladen. 
+END
+
+### Wald ###
+
+// Kreuzung
+LOC5
+Weggabelung
+Ihr steht an einer Weggabelung mitten im Wald.
+END
+
+// Hütte des Einsiedlers
+LOC6
+Huette des Einsiedlers
+Ihr steht vor einer kleinen, bemoosten Huette inmitten des Waldes.
+END
+
+// Sumpf
+LOC7
+END
+
+// Tongrube
+LOC8
+
+END
+
+// Lichtung
+LOC9
+Lichtung der Bestinger
+Ihr steht auf einer Lichtung. Die hier lebenden Bestinger werfen Euch neugierige Blicke zu.
+END
+
+
