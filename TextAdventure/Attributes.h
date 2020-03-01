@@ -11,7 +11,7 @@ private:
 	int strength;
 	int health;
 	int dexterty;
-	int livepoints;
+	int lifepoints;
 
 public:
 	//constructors
@@ -29,7 +29,7 @@ public:
 	int get_health();
 	void set_dexterty(int);
 	int get_dexterty();
-	void set_livepoints(int);
-	int get_livepoints();
+	void set_lifepoints(int);
+	int get_lifepoints();
 };
 

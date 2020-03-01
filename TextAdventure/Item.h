@@ -4,6 +4,10 @@
 #include<iomanip>
 #include<string>
 
+// item class
+// not implemented in game / first draft
+// could be hold by inventory
+
 class Item
 {
 	private:
@@ -24,7 +28,5 @@ class Item
 		inline const std::string& getName() const { return this->name; }
 		inline const int& getPriceBuy() const { return this->priceBuy; }
 		inline const int& getPriceSell() const { return this->priceSell; }
-
-		// setters
 };
 

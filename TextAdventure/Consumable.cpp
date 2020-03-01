@@ -1,5 +1,7 @@
 #include "Consumable.h"
 
+// consumable items, not in game / first draft
+
 Consumable::Consumable(std::string name, int priceBuy, int priceSell, int heal)
 	: Item(name, priceBuy, priceSell)
 {

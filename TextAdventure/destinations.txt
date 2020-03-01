@@ -15,7 +15,7 @@ DEST2
 2: Den Kramerladen aufsuchen
 4
 3: Das Dorf Richtung Wald verlassen
-5
+9
 END
 
 // Spieltische in der Taverne
@@ -28,13 +28,13 @@ END
 
 // Kramerladen
 DEST4
+1: Kramerladen verlassen
 2
 END
 
 ### Wald ###
 
 // Weggabelung
-
 DEST5
 1: Zurueck ins Dorf
 2
@@ -44,3 +44,49 @@ DEST5
 9
 END
 
+// Lichtung der Biestinger
+DEST9
+1: Zurueck ins Dorf
+2
+2: Zur nahegelgenen Tongrube
+8
+3: Zur Hoehle an der Kueste
+10
+END
+
+//Tongrube
+DEST8
+1: Zur Lichtung der Biestinger
+9
+END
+
+//Höhle
+DEST10
+1: Zur Lichtung der Biestinger
+9
+END
+
+//Schiff
+DEST11
+1: Zur Lichtung der Biestinger
+9
+2: In die Kapitaenskajuete
+12
+END
+
+//Kapitaenskajuete
+DEST12
+1: Das Schiff verlassen
+10
+END
+
+// Dorfplatz Finale
+DEST13
+Ihr solltet zuerst mit dem Mann reden, den Ihr eben gerettet habt!
+END
+
+// Lichtung Finale
+DEST14
+1: Zurueck ins Dorf
+13
+END

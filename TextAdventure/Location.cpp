@@ -1,5 +1,7 @@
 #include "Location.h"
 
+// location class, which holds active location and basic location functions
+
 Location::Location(int id)
 {
 	this->id = id;
@@ -14,27 +16,30 @@ Location::~Location()
 
 }
 
+// initialize location with specific location id
+
 void Location::init(const int id)
 {
 	this->id = id;
 	this->name = "";
 	this->description = "";
 
-	std::ifstream inputFile(this->LOC_FILE);
+	std::ifstream input_file(this->LOC_FILE);
 	std::string key = "LOC" + std::to_string(this->id);
 
-	if (inputFile.is_open())
+	// open location file and search for specific location
+	if (input_file.is_open())
 	{
-		std::string currentLine = "";
+		std::string current_line = "";
 
-		while (std::getline(inputFile, currentLine))
+		while (std::getline(input_file, current_line))
 		{
-			std::size_t found = currentLine.find(key);
+			std::size_t found = current_line.find(key);
 
 			if (found != std::string::npos)
 			{
-				std::getline(inputFile, this->name);
-				std::getline(inputFile, this->description);
+				std::getline(input_file, this->name);
+				std::getline(input_file, this->description);
 				break;
 			}
 		}
@@ -42,15 +47,18 @@ void Location::init(const int id)
 	else
 		throw("Location loading error!");
 
-	inputFile.close();
-	this->setLocationOptions(DEST_FILE, this->DEST, &this->destinations);
-	this->setLocationOptions(NPCS_FILE, this->NPCS, &this->npcs);
-	this->setLocationOptions(POI_FILE, this->POI, &this->poi);
+	input_file.close();
+	// set all basic location options: destinations, npcs, pois
+	this->set_location_options(DEST_FILE, this->DEST, &this->destinations);
+	this->set_location_options(NPCS_FILE, this->NPCS, &this->npcs);
+	this->set_location_options(POI_FILE, this->POI, &this->poi);
+	// check if location has init event
 	this->init_ev_id = this->check_for_init_event();
 }
 
-std::string Location::getLocation() 
+std::string Location::get_location() 
 {
+	// ouput location data
 	std::string location = 
 		"Ort: " + this->name + "\n"
 		+ this->description + "\n";
@@ -60,15 +68,16 @@ std::string Location::getLocation()
 
 void Location::swap_location(int id)
 {
+	//swap location based on location id
 	if (this->id != id)
 	{
 		this->init(id);
 	}
 }
 
-void Location::setLocationOptions(std::string file, std::string type, std::map<std::string, int> *options)
+void Location::set_location_options(std::string file, std::string type, std::map<std::string, int> *options)
 {
-	std::ifstream inputFile(file);
+	std::ifstream input_file(file);
 	(*options).clear();
 
 	std::string key = type + std::to_string(this->id);
@@ -76,21 +85,22 @@ void Location::setLocationOptions(std::string file, std::string type, std::map<s
 	std::string option_text = "NONE";
 	int option_id = 0;
 
-	if (inputFile.is_open())
+	// open specific options file (destinations, npcs, poi) and read in options
+	if (input_file.is_open())
 	{
-		std::string currentLine = "";
+		std::string current_line = "";
 
-		while (std::getline(inputFile, currentLine))
+		while (std::getline(input_file, current_line))
 		{
-			std::size_t found = currentLine.find(key);
+			std::size_t found = current_line.find(key);
 
 			if (found != std::string::npos)
 			{
-				while (std::getline(inputFile, currentLine) && currentLine != "END")
+				while (std::getline(input_file, current_line) && current_line != "END")
 				{
-					option_text = currentLine;
-					inputFile >> option_id;
-					inputFile.ignore();
+					option_text = current_line;
+					input_file >> option_id;
+					input_file.ignore();
 					(*options)[option_text] = option_id;
 				}
 				break;
@@ -100,11 +110,12 @@ void Location::setLocationOptions(std::string file, std::string type, std::map<s
 	else
 		throw("Destination loading error!");
 
-	inputFile.close();
+	input_file.close();
 }
 
 int Location::choose_option(std::string type, std::string additional_option)
 {
+	// options based on option type
 	std::map<std::string, int> *options = nullptr;
 	if (type == this->DEST) options = &this->destinations;
 	else if (type == this->NPCS) options = &this->npcs;
@@ -121,12 +132,12 @@ int Location::choose_option(std::string type, std::string additional_option)
 		it++;
 	}
 	
+	// output options
 	options_text += std::to_string((*options).size()+1) + ": " + additional_option + "\n";
-
 	std::cout << options_text << std::endl;
 	
+	// let player make decision
 	int option_decision;
-	
 	std::cin >> option_decision;
 	std::cout << std::endl;
 
@@ -142,6 +153,7 @@ int Location::choose_option(std::string type, std::string additional_option)
 		std::cin >> option_decision;
 	}
 
+	// choose next action id based on option index and type
 	if (!(option_decision > (*options).size() + 1) && !(option_decision < 1))
 	{
 		if (option_decision != (*options).size() + 1)
@@ -149,7 +161,7 @@ int Location::choose_option(std::string type, std::string additional_option)
 			// different option types
 			if (type == this->DEST)
 			{
-				this->changeLocation(option_decision);
+				this->change_location(option_decision);
 				if (this->init_ev_id != 0) next_action_id = 5;
 			}
 			else if (type == this->NPCS) next_action_id = 1;
@@ -164,20 +176,25 @@ int Location::choose_option(std::string type, std::string additional_option)
 	return next_action_id;
 }
 
-void Location::changeLocation(int dest_id)
+void Location::change_location(int dest_id)
 {
+	//change location based on chosen destination
 	std::map<std::string, int>::iterator it = this->destinations.begin();
 	for (size_t i = 1; i < dest_id; i++) it++;
 	this->swap_location(it->second);
 }
 
-void Location::talk_to_npc()
+int Location::talk_to_npc()
 {
-
+	// talk to npc based on chosen npc
+	std::map<std::string, int>::iterator it = this->npcs.begin();
+	for (size_t i = 1; i < this->option_decision_id; i++) it++;
+	return it->second;
 }
 
 int Location::look_at()
 {
+	// look at poi based on chosen poi
 	std::map<std::string, int>::iterator it = this->poi.begin();
 	for (size_t i = 1; i < this->option_decision_id; i++) it++;
 	return it->second;
@@ -186,28 +203,29 @@ int Location::look_at()
 int Location::check_for_init_event()
 {
 	int ev_id = 0;
-	std::ifstream inputFile(this->INIT_EV_FILE);
+	std::ifstream input_file(this->INIT_EV_FILE);
 
-	if (inputFile.is_open())
+	//open init event file and search for specific init event
+	if (input_file.is_open())
 	{
 		int current_number = 0;
-		inputFile >> current_number;
+		input_file >> current_number;
 
-		while (!inputFile.eof())
+		while (!input_file.eof())
 		{
 			if (current_number == this->id)
 			{
-				inputFile >> ev_id;
+				input_file >> ev_id;
 				break;
 			}
 			
-			inputFile.ignore();
-			inputFile >> current_number;
+			input_file.ignore();
+			input_file >> current_number;
 		}
 	}
 	else
 		throw("Init check loading error!");
 	
-	inputFile.close();
+	input_file.close();
 	return ev_id;
 }

@@ -2,6 +2,9 @@
 
 #include"Consumable.h"
 
+// inventory header
+// not implemented in game / first draft
+
 class Inventory
 {
 	private:
@@ -22,10 +25,6 @@ class Inventory
 		// functions
 		void add(const Item &item);
 		void remove(int index);
-		
-		// getter
-
-		// setter
 
 };
 

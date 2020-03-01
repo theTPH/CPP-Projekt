@@ -1,11 +1,6 @@
 POI1
-1: An einem grossen Tisch in der Mitte des Raumes findet offenbar ein Saufgelage statt.
+1: den grossen Tisch in der Mitte des Raumes.
 2
-END
-
-POI2
-1: Auf dem Boden scheint im Staub etwas zu glitzern.
-66
 END
 
 POI3
@@ -15,4 +10,24 @@ POI4
 END
 
 POI5
+END
+
+POI8
+1: einen Schuerfplatz
+25
+END
+
+POI9
+1: Fellbueschel vor einem Laubhaufen
+70
+END
+
+POI10
+1: den Steg im unteren Bereich der Hoehle
+40
+END
+
+POI12
+1: den Raum untersuchen
+45
 END

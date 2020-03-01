@@ -1,9 +1,11 @@
 #include "Menu.h"
 
+// menu class which holds active menu data
+
 Menu::Menu(std::string name)
 {
 	this->name = name;
-	this->menuString = "";
+	this->menu_string = "";
 	this->id = 1;
 }
 
@@ -15,23 +17,24 @@ Menu::~Menu()
 void Menu::init(const std::string name)
 {
 	this->name = name;
-	std::ifstream inputFile(this->FILE);
+	std::ifstream input_file(this->FILE);
 
-	if (inputFile.is_open())
+	// open menu file and search for specific menu
+	if (input_file.is_open())
 	{
-		std::string currentLine = "";
+		std::string current_line = "";
 
-		while (std::getline(inputFile, currentLine))
+		while (std::getline(input_file, current_line))
 		{
-			std::size_t found = currentLine.find(this->name);
+			std::size_t found = current_line.find(this->name);
 
 			if (found != std::string::npos)
 			{
-				inputFile >> this->id;
+				input_file >> this->id;
 
-				while (std::getline(inputFile, currentLine) && currentLine != "END")
+				while (std::getline(input_file, current_line) && current_line != "END")
 				{
-					this->menuString += currentLine + "\n";
+					this->menu_string += current_line + "\n";
 				}
 
 				break;
@@ -41,5 +44,5 @@ void Menu::init(const std::string name)
 	else
 		throw("Menu loading error!");
 
-	inputFile.close();
+	input_file.close();
 }

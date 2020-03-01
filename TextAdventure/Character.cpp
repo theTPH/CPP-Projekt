@@ -52,7 +52,7 @@ void Character::level_up_system(int xp)
 			{
 				int old_st = this->get_attributes().get_strength();
 				int new_st = old_st + 1;
-				Attributes new_att = Attributes(new_st, this->get_attributes().get_health(), this->get_attributes().get_dexterty(), this->get_attributes().get_livepoints());
+				Attributes new_att = Attributes(new_st, this->get_attributes().get_health(), this->get_attributes().get_dexterty(), this->get_attributes().get_lifepoints());
 				this->set_attributes(new_att);
 				this->get_attributes().print_attributes();
 				answer_valid = true;
@@ -61,7 +61,7 @@ void Character::level_up_system(int xp)
 			{
 				int old_he = this->get_attributes().get_health();
 				int new_he = old_he + 1;
-				int new_le = this->get_attributes().get_livepoints() + 3;
+				int new_le = this->get_attributes().get_lifepoints() + 3;
 				Attributes new_att = Attributes(this->get_attributes().get_strength(), new_he, this->get_attributes().get_dexterty(), new_le);
 				this->set_attributes(new_att);
 				this->get_attributes().print_attributes();
@@ -71,7 +71,7 @@ void Character::level_up_system(int xp)
 			{
 				int old_de = this->get_attributes().get_dexterty();
 				int new_de = old_de + 1;
-				Attributes new_att = Attributes(this->get_attributes().get_strength(), this->get_attributes().get_health(), new_de, this->get_attributes().get_livepoints());
+				Attributes new_att = Attributes(this->get_attributes().get_strength(), this->get_attributes().get_health(), new_de, this->get_attributes().get_lifepoints());
 				this->set_attributes(new_att);
 				this->get_attributes().print_attributes();
 				answer_valid = true;
@@ -80,12 +80,14 @@ void Character::level_up_system(int xp)
 			{
 				cout << "Deine Eingabe war leider ungueltig. Bitte gebe 'S', 'L' oder 'G' ein." << endl;
 			}
+			cout << endl;
 		}
 	}
 	else
 	{
 		cout << "Glueckwunsch! du hast " << xp << " Erfahrungspunkte verdient." << endl;
 		cout << "Dir fehlen noch " << this->get_xp_lvl_up() - current_xp << " Erfahrungspunkte zum naechsten LVL." << endl;
+		cout << endl;
 		this->set_xp(current_xp);
 	}
 }

@@ -36,17 +36,45 @@ END
 
 // Sumpf
 LOC7
+Sumpf
+Ueberall blubbert und matscht es. Ihr steht eindeutig am Rande des Sumpfs.
 END
 
 // Tongrube
 LOC8
-
+Tongrube
+Ihr steht an einer mittelgrossen Tongrube.
 END
 
 // Lichtung
 LOC9
-Lichtung der Bestinger
-Ihr steht auf einer Lichtung. Die hier lebenden Bestinger werfen Euch neugierige Blicke zu.
+Lichtung der Biestinger
+Ihr steht auf einer Lichtung. Die hier lebenden Biestinger werfen Euch neugierige Blicke zu.
 END
 
+// Höhle an der Küste
+LOC10
+Hoehle an der Kueste
+Ihr steht in einer grossen Hoehle mit Verbindung zum Meer. Die aufkommende Brandung peitscht an die Auslauefer der Hohele.
+END 
 
+LOC11
+Schiff in der Kuestenhoehle
+Ihr steht auf dem Schiff in der Kuestenhoehle.
+END
+
+LOC12
+Kapitaenskajuete
+Ihr steht mitten in der kleinen, etwas heruntergekommenen Kapitaenskajuete des Schiffs.
+END
+
+// Finale
+LOC13
+Dorfplatz
+Du stehst auf dem ziemlich beschaulichen, aber nun vom Kampf gezeichneten Dorfplatz von Kroekelbrueck.
+END
+
+LOC14
+Lichtung der Biestinger
+Ihr steht auf einer Lichtung. Die hier lebenden Biestinger werfen Euch neugierige Blicke zu.
+END

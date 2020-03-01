@@ -2,6 +2,9 @@
 
 #include"Item.h"
 
+// consumable items, not in game / first draft
+// is an item
+
 class Consumable : public Item
 {
 	private:
@@ -10,15 +13,13 @@ class Consumable : public Item
 	public:
 		Consumable(
 			std::string name = "NONE",
-			int priceBuy = 0,
-			int priceSell = 0,
+			int price_buy = 0,
+			int price_sell = 0,
 			int heal = 5);
 		virtual ~Consumable();
 
 	// virtual
 	virtual Consumable* clone() const;
 
-	// functions
-	
 };
 

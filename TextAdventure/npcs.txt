@@ -1,18 +1,19 @@
 NPCS1
-1: Wirt Tom, dem Seebaeren
-1
-2: Gerda, der Kaemmerin
-2
-3: Travan, dem verwundete Fischer
-3
-END
-
-NPCS3
-1: einer Gruppe von Gluecksspielern
-4
+1: unter den Leuten am Tresen umschauen
+5
 END
 
 NPCS4
 1: Wilfred Kramer, dem Ladenbesitzer
-5
+88
+END
+
+NPCS9
+1: der neugierigen Gruppe von Pilzbiestingern
+12
+END
+
+NPCS13
+1: dem Mann, mit dem Ihr zuvor Seite an Seite gekaempft habt
+54
 END

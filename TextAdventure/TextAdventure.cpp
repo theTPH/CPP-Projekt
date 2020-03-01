@@ -1,21 +1,20 @@
-#include <iostream>
-#include "Funcs.h"
 #include "Game.h"
 
 using namespace std;
 
 int main()
 {
-	/*srand(time(NULL));*/
-
+	// init game
 	Game game;
 	game.init();
 
-	while (game.getIsRunning())
+	// keep running actual game menu until game is closed
+	while (game.get_is_running())
 	{
-		game.gameMenu();
+		game.game_Menu();
 	}
 
+	// prevent unwanted automatic exit
 	system("PAUSE");
 
 	return 0;

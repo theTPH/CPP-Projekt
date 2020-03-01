@@ -1,7 +1,0 @@
-// Wirt Tom, der Seebaer
-DLG1
-END
-
-
-DLG2
-END

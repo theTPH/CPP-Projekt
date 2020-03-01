@@ -20,7 +20,7 @@ bool Combat::execute_combat()
 	while (!combat_over)
 	{
 		//players turn
-		if (this->player.get_attributes().get_livepoints() > 0)
+		if (this->player.get_attributes().get_lifepoints() > 0)
 		{
 			cout << player.get_name() << " du bist am Zug." << endl;
 			while (!anser_valid)
@@ -51,7 +51,7 @@ bool Combat::execute_combat()
 		}
 
 		//enemys turn
-		if (this->enemy.get_attributes().get_livepoints() > 0)
+		if (this->enemy.get_attributes().get_lifepoints() > 0)
 		{
 			cout << enemy.get_name() << " ist am Zug." << endl;
 			combat_over = attack(enemy, player);
@@ -78,7 +78,7 @@ bool Combat::attack(Character attacker, Character defender)
 
 	cout << "Der Angriff verursacht " << damage << " Schaden!" << endl;
 
-	int rem_health = defender.get_attributes().get_livepoints() - damage;
+	int rem_health = defender.get_attributes().get_lifepoints() - damage;
 	if (rem_health <= 0)
 	{
 		if (defender.get_name() == this->player.get_name())

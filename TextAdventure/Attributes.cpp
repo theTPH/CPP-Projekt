@@ -6,7 +6,7 @@ Attributes::Attributes(int strength, int health, int dexterty)
 	this->strength = strength;
 	this->health = health;
 	this->dexterty = dexterty;
-	this->livepoints = health * 3;
+	this->lifepoints = health * 3;
 }
 
 Attributes::Attributes(int strength, int health, int dexterty, int lifepoints)
@@ -14,7 +14,7 @@ Attributes::Attributes(int strength, int health, int dexterty, int lifepoints)
 	this->strength = strength;
 	this->health = health;
 	this->dexterty = dexterty;
-	this->livepoints = lifepoints;
+	this->lifepoints = lifepoints;
 }
 
 //methods
@@ -129,7 +129,7 @@ void Attributes::initial_attribute_select()
 				cout << endl;
 				set_strenght(strength);
 				set_health(health);
-				set_livepoints(livepoints);
+				set_lifepoints(livepoints);
 				set_dexterty(dexterty);
 				answer_valid = true;
 				finished_process = true;
@@ -156,7 +156,7 @@ void Attributes::print_attributes()
 	cout << "Deine Attribute sind momentan:" << endl;
 	cout << "Staerke: " << this->get_strength() << endl;
 	cout << "Lebenskraft: " << this->get_health() << endl;
-	cout << "Lebenspunkte: " << this->get_livepoints() << endl;
+	cout << "Lebenspunkte: " << this->get_lifepoints() << endl;
 	cout << "Geschicklichkeit: " << this->get_dexterty() << endl;
 }
 
@@ -186,11 +186,11 @@ int Attributes::get_dexterty()
 {
 	return this->dexterty;
 }
-void Attributes::set_livepoints(int livepoints)
+void Attributes::set_lifepoints(int livepoints)
 {
-	this->livepoints = livepoints;
+	this->lifepoints = livepoints;
 }
-int Attributes::get_livepoints()
+int Attributes::get_lifepoints()
 {
-	return this->livepoints;
+	return this->lifepoints;
 }

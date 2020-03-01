@@ -4,6 +4,11 @@ Ein grimmiger Wolf taucht auf und fletscht die Zaehne!
 3 3 3
 
 CBT2
-XYZ
-blablabla
-4 4 4
+Piratenskelett
+Ein untotes Piratenskelett fuchtelt mit dem Saebel vor Eurer Nase herum: "Hat man Euch keinen Anstand beigebracht?! Da will man einmal Urlaub machen und dann das! Ich werde euch lehren, was es heisst einfach ungefragt auf fremder Leute Bote zu steigen, ARRGH!" Ein Kampf scheint unausweichlich... 
+5 3 4
+
+CBT3
+Bandit
+Der Bandit, dem Ihr Euch entgegenstellt wirft Euch ein haessliches Grinsen zu und richtet sein Messer auf Euch...
+3 4 5

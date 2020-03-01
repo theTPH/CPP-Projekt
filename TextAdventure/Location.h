@@ -7,6 +7,8 @@
 #include<fstream>
 #include<map>
 
+// location header, which holds active location data and basic location functions
+
 class Location
 {
 	private:
@@ -40,16 +42,17 @@ class Location
 		// functions
 		void swap_location(int id);
 		int choose_option(std::string type, std::string additional_option);
-		void changeLocation(int dest_id);
-		void talk_to_npc();
+		void change_location(int dest_id);
+		int talk_to_npc();
 		int look_at();
 		int check_for_init_event();
 
 		// getters
-		std::string getLocation();
+		std::string get_location();
+		inline int const get_location_id() const { return this->id; }
 		inline int const get_init_ev_id() const { return this->init_ev_id; };
 
 		// setters
-		void setLocationOptions(std::string file, std::string type, std::map<std::string, int> *options);
+		void set_location_options(std::string file, std::string type, std::map<std::string, int> *options);
 };
 

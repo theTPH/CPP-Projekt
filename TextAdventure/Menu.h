@@ -4,11 +4,13 @@
 #include<iostream>
 #include<fstream>
 
+// menu header
+
 class Menu
 {
 	private:
 		std::string name;
-		std::string menuString;
+		std::string menu_string;
 		int id;
 		const std::string FILE = "menues.txt";
 
@@ -18,8 +20,8 @@ class Menu
 		void init(const std::string name);
 
 		// getters
-		int const getId() const { return this->id; };
-		std::string const getMenu() const { return this->menuString; };
+		int const get_id() const { return this->id; };
+		std::string const get_menu() const { return this->menu_string; };
 
 };
 

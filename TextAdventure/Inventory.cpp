@@ -1,5 +1,8 @@
 #include "Inventory.h"
 
+// inventory class
+// not implemented in game / first draft
+
 Inventory::Inventory()
 {
 	this->size = 5;

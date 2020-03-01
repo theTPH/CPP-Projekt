@@ -2,7 +2,7 @@
 
 //Taverne
 EV1
-Euer letztes Abenteuer sitzt euch noch in den Knochen. Nach einem langen Marsch kommt ihr endlich im vertraeumten und idyllischen Doerfchen Klorkelrueck an. Die Vorbereitungen fuer das alljaehrliche Fischerfest scheinen in vollem Gange zu sein. Ein fahrender Haendler hat euch von diesen Festivitaeten berichtet. Ihr habt kaum Zeit euch auf dem beschaulichen Dorfplatz umzusehen, da kommt auch schon einer der freundlichen Dorfbewohner auf euch zu und laed euch ein an den Feierlichkeiten in der oertlichen Taverne teilzunehmen. Das lasst Ihr euch natuerlich nicht zweimal sagen und betretet sogleich die Taverne #Zum betrunkenen Kraken# !
+Euer letztes Abenteuer sitzt euch noch in den Knochen. Nach einem langen Marsch kommt ihr endlich im vertraeumten und idyllischen Doerfchen Klorkelrueck an. Die Vorbereitungen fuer das alljaehrliche Fischerfest scheinen in vollem Gange zu sein. Ein fahrender Haendler hat euch von diesen Festivitaeten berichtet. Ihr habt kaum Zeit euch auf dem beschaulichen Dorfplatz umzusehen, da kommt auch schon einer der freundlichen Dorfbewohner auf euch zu und laed euch ein an den Feierlichkeiten in der oertlichen Taverne teilzunehmen. Das lasst Ihr euch natuerlich nicht zweimal sagen und betretet sogleich die Taverne "Zum betrunkenen Kraken" !
 0
 LOC
 1
@@ -18,7 +18,7 @@ Du trittst etwas naeher an den Tisch heran. Es herrscht ausgelassene Stimmung un
 END
 
 EV3
-Ihr setzt euch an den Tisch und steigt in das Saufgelage mit ein. Aus einem spendierten Krug wird schnell der zweite, aus diesem der dritte... und irgendwie wird es auf einmal schwierig mit dem Zaehl... Aber hey, einem geschenkten Gaul... Ihr wisst schon ;) .  Irgendwann ist auch das mit dem Aufrechtsitzen nicht mehr so einfach und ihr beschliesst, euren Brummschaedel ein paar Minuten auf der Tischplatte zu goennen.
+Ihr setzt euch an den Tisch und steigt in das Saufgelage mit ein. Aus einem spendierten Krug wird schnell der zweite, aus diesem der dritte... und irgendwie wird es auf einmal schwierig mit dem Zaehlen... Aber hey, einem geschenkten Gaul... Ihr wisst schon ;) .  Irgendwann ist auch das mit dem Aufrechtsitzen nicht mehr so einfach und ihr beschliesst, euren Brummschaedel ein paar Minuten auf der Tischplatte zu goennen.
 0
 EV
 4
@@ -55,9 +55,10 @@ Tatsaechlich habt Ihr auf eurem Weg hier her am Wegesrand ein Bueschel Sonnekrau
 END
 
 EV8
-Ihr gebt dem Fischer das Sonnenkraut aus eurer Tasche. "Ihr wollt mir das schenken? Einfach so? Vielen Dank, Ihr glaubt gar nicht wie sehr mir das weiterhilft! Also gut.. da Ihr so freundlich zu mir wart, lasst mich Euch einen Tipp geben: Solltet Ihr abseits der Festlichkeiten ein wenig abenteuerliche Abwechslung suchen, schaut unbedingt auf der Lichtung der Bestinger im Wald noerdlich von hier vorbei. Komische Viecher, aber fuer Abenteuerlustige, wie Ihr mir einer zu sein scheint, haben sie wohl immer ein paar spannende Aufgaben parat!" Hastig schnappt er sich das Kraut und verlaesst die Kneipe ... 
+Ihr gebt dem Fischer das Sonnenkraut aus eurer Tasche. "Ihr wollt mir das schenken? Einfach so? Vielen Dank, Ihr glaubt gar nicht wie sehr mir das weiterhilft! Also gut.. da Ihr so freundlich zu mir wart, lasst mich Euch einen Tipp geben: Solltet Ihr abseits der Festlichkeiten ein wenig abenteuerliche Abwechslung suchen, schaut unbedingt auf der Lichtung der Biestinger im Wald noerdlich von hier vorbei. Komische Viecher, aber fuer Abenteuerlustige, wie Ihr mir einer zu sein scheint, haben sie wohl immer ein paar spannende Aufgaben parat!" Hastig schnappt er sich das Kraut und verlaesst die Kneipe ... 
 0
 LOC
+1
 1
 1
 
@@ -67,46 +68,379 @@ EV9
 LOC
 1
 1
+0
 
 EV10
-Tom der Seebaer, der Wirt der Taverne, kommt auf euch zugeschlurft, als er Eure Verwirrung bemerkt. "Ein bisschen muesst Ihr schon selbst auf euch aufpassen, bei dem Trubel hier kann ich nicht alles im Auge behalten! Ich weiss nicht, ob Euch das weiterhilft, aber vor einiger Zeit habe eine junge Dame hastig die Taverne verlassen sehen. Vielleicht gehoert sie zu dem Diebespack, das sich seit einiger Zeit hier im Wald herumtreibt. Vielleicht solltet Ihr Euch dort mal umsehen, wenn Ihr Euer Gold wiedersehen wollt und mutig genug seid." Mit einem Schulterzucken raeumt Tom die Uebereste eures Gelages ab und verschwindet dann wieder hinter den Tresen.
+Tom der Seebaer, der Wirt der Taverne, kommt auf euch zugeschlurft, als er Eure Verwirrung bemerkt. "Ein bisschen muesst Ihr schon selbst auf euch aufpassen, bei dem Trubel hier kann ich nicht alles im Auge behalten! Ich weiss nicht, ob Euch das weiterhilft, aber seht euch mal im Wald auf der Lichtung der Biestinger um, wenn Ihr euch traut. Einige reisende haben berichtet, dass dort immer wieder mal gestohlenes Diebesgut aufgetaucht ist. Ob ihr da auch mit Eurem Goldbeutel Glueck habt... Nun..." Mit einem Schulterzucken raeumt Tom die Ueberreste eures Gelages ab und verschwindet dann wieder hinter den Tresen.
 0
 LOC
+1
 1
 1
 
 // Dorfplatz
 
 
-// Kramerladen
-
 ### Wald ###
 
-// Weggabelung
+// Lichtung
 EV11
-Ihr entfernt euch vom Dorftrubel und erreicht recht schnell den ausseren Waldrand. Entschlossen geht ihr tiefer in den Wald hinein. Zwar wurdet ihr bereits vor dem hier herumlungernden Diebespackgewarnt, doch zunaechst erregt etwas ganz anderes Eure Aufmerksamkeit: Ein tiefes boesartiges Knurren!
+Ihr entfernt euch vom Dorftrubel und erreicht recht schnell den aeusseren Waldrand. Entschlossen geht ihr tiefer in den Wald hinein. Zwar wurdet ihr bereits vor dem hier herumlungernden Diebespackgewarnt, doch zunaechst erregt etwas ganz anderes Eure Aufmerksamkeit: Ein tiefes boesartiges Knurren!
 0
 CBT
 1
 0
+0
 
-// Hütte des Einsiedlers
+// Pilzbiestinger
+EV12
+Ihr naehrt euch langsam der bunt gemischten Pilzbiestingergruppe. Bevor Ihr ueberhaupt ein Wort mit Euren Lippen formen koennt, kommt euch der Kleinste der Gruppe zuvor: "Seid gegruesst, Abenteurer!"
+0
+EV
+13
+0
+
+EV13
+"Ihr seid nicht zufaellig ein Pirat? Verzeiht meine Manieren, Tuk mein Name. Meine Freunde hier und ich wuerden gerne mal so einen echten Piratentag verleben, wisst Ihr? Naja, so als Pilz ist das eben nicht so leicht, wir sind ja hier verwurzelt! Ihr koenntet uns da nicht zufaelligerweise aushelfen? Wie das mit den Belohnungen bei Abenteurern funktioniert, wissen wir schon, keine Angst!"
+2
+1: Belohnung? Na klar, ich bin dabei! Was muss ich tun?
+14
+2: Entschuldigt, fuer sowas habe ich keine Zeit.
+15
+END
+
+EV14
+Die Pilzbiestinger wippen freudig auf der Stelle. "Grossartig! Also erstmal benoetigen wir eine Transportmoeglichkeit. Simple Blumentoepfe mit ein bisschen Erde sollten da schon ausreichen, schaut euch am besten Mal an der nahegelegenen Tongrube um! Ihr seid doch auf Zack und koennt da sicher was zusammenbasteln!"
+0
+LOC
+9
+1
+1
+
+EV15
+Die Pilzbande scheint niedergeschlagen: "Oh wie schade! Naja, wenn Ihr es Euch anders ueberlegt - wir laufen hier nicht weg, das koennen wir eh nicht."
+0
+LOC
+9
+1
+0
+
+EV16
+"Habt Ihr schon ein paar Blumentoepfe fuer uns dabei? Nein? Wie gesagt, schaut Euch am besten mal in der nahegelegenen Tongrube um. Da laesst sich doch sicherlich was basteln!"
+0
+LOC
+9
+1
+0
+
+EV17
+"Prima, die Blumentoepfe habt Ihr schon mal! Nun brauchen wir ein Schiff! Wir koennen es kaum erwarten, in diesen Blumentoepfen, die Ihr uns gebracht habt in See zu stechen! Schaut doch mal in die Hoehle an der Kueste! Andere Biestinger haben berichtet, dass dort zur Zeit ein Schiff ankert!"
+0
+LOC
+9
+1
+0
+
+EV18
+"Ihr habt tatsaechlich ein Schiff gefunden?! Yippie! Alles, was uns jetzt noch fehlt ist ein faehiger Kapitaen! Klorkelbrueck ist doch ein Dorf voller Seemansleute! Da sollte doch auch Kapitaensmaterial dabei sein. Vielleicht solltet Ihr Euch dort mal umhoeren?"
+0
+EV
+58
+0
+1
+
+EV19
+"Unglaublich! Ihr habt uns alles besorgt, worum wir gebeten haben! Wir danken euch vielmals! Wuerdet Ihr uns bitte in die Blumentoepfe umtopfen und zum Schiff in der Hoehle bringen?"
+2
+1: Aber natuerlich, werte Freunde!
+20
+2: Einen Moment noch bitte!
+21
+END
+
+
+EV20
+So behutsam wie Ihr koennt, setzt Ihr die illustre kleine Pilzbiestingergruppe nacheinander in die selbsthergestellten Blumentopefe um, klemmt sie Euch unter den Arm unter wandert los Richtung Hoehle...
+0
+EV
+22
+0
+0
+
+EV21
+Die kleine Gruppe scheint etwas ungeduldig: "Nagut, aber bitte - lasst uns nicht zu lange warten!"
+0
+LOC
+9
+1
+0
+
+EV22
+In der Hoehle angekommen, quieken die Biestinger vor Freude, als sie das Schiff erblicken. Es scheint genau nach Ihrem Geschmack zu sein! "Hervorragend! Habt tausend Dank! Kommt begleitet uns auf unseren ersten Beutezug!"
+0
+EV
+23
+0
+0
+
+EV23
+Ihr koennt gar nicht anders, als den freundlichen kleinen Gesellen zuzustimmen. Gemeinsam geht Ihr an Bord und stecht in See!
+0
+EV
+99
+0
+0
+
+
+// Kramerladen
+EV88
+Der Ladenbesitzer wendet sich Euch leicht gestresst zu: "Entschuldigt, aber momentan kann ich euch keine Waren anbieten. Die Arbeit an dem Spiel, dass Ihr gerade spielt hat einfach zu viel Zeit in Anspruch genommen ;) !"
+0
+LOC
+4
+1
+0
+
 
 // Tongrube
+EV25
+Ihr schaut euch in der Tongrube um. Hier gibt es halt... viel Ton. Momentan faellt Euch nicht ein, wie Ihr das fuer Euch nutzen koenntet...
+0
+LOC
+8
+1
+0
 
-// Sumpf
+EV26
+Ihr schaut euch in der Tongrube um. Hier gibt es wirklich eine Menge Ton. Genau das Richtige um ein paar Blumentoepfe fuer die Aufgabe der Pilzbiestinger herzustellen! Sogar ein Brennofen steht bereit! Wollt Ihr versuchen, mit dem Ton Blumentoepfe herzustellen?
+2
+1: Natuerlich!
+27
+2: Jetzt nicht...
+29
+END
 
-// Lichtung
+EV27
+Mit euren blossen Haenden schoepft Ihr eine grosszuegige Menge Ton aus der Grube, formt etwas, was man mit gutem Willen fuer Blumentoepfe halten koennte und facht den Brennofen an, um Euren Werken Festigkeit zu geben...
+0
+EV
+28
+0
+0
 
-### Küste ###
+EV28
+Und tatsaechlich - Sie sind nicht schoen, aber sollten in der Lage sein, die Pilzbiestinger zu transportieren. Ein bisschen stolz verstaut Ihr Eure Blumentopfskunst.
+0
+LOC
+8
+1
+1
+
+EV29
+Ihr beschliesst vorerst, euch nicht die Haende schmutzig zu machen.
+0
+LOC
+8
+1
+0
+
+EV30
+Ihr habt Euer Werk hier bereits getan. Zufrieden wendet Ihr Euch ab.
+0
+LOC
+8
+1
+0
+
+
 
 // Höhle
+EV40
+Ausser dem salzverkrusteten Steg und der gleichmaessig rauschenden Brandung erweckt nichts hier Eure Aufmerksamkeit...
+0
+LOC
+10
+1
+0
 
-// Klippen
+EV41
+Direkt faellt Euch hier das kleine Schiff ins Auge, welches noch nicht lange zu ankern scheint. Es wuerde sich prima als Aushilfspiratenschiff, nach dem die Pilzbiestinger suchen eignen! Wollt Ihr an Bord gehen und Euch umsehen?
+2
+1: Ja, unbedingt!
+42
+2: Nein, lieber nicht.
+43
+END
+
+EV42
+Vorsichtig klettert Ihr auf das Boot...
+0
+LOC
+11
+0
+0
+
+EV43
+Ihr beschliesst vorerst, lieber keine schlafenden Hunde zu wecken und kehrt um.
+0
+LOC
+10
+1
+0
+
+EV44
+Ihr setzt kaum den ersten Fuss an Deck, da springt auf einmal mit ohrenbetaeubendem Krawall die Tuer der Kapitaenskajuete auf!
+0
+CBT
+2
+1
+1
+
+EV45
+Ihr schaut euch um und findet einige Unterlagen ueber das Schiff. Zwar war der Besitzer dieses Schiffes durchaus etwas... "merkwuerdiger" Natur, aber sein Schiff hat er tipp topp instand gehalten! Es ist mehr als seetauglich fuer den Moechtegern-Piratentrip der Pilzbiestinger! Du solltest Ihnen schnell Bescheid geben!
+0
+LOC
+12
+1
+0
+
+EV46
+Um das Schiff habt Ihr Euch bereits gekuemmert. Hier gibt es nichts mehr zu tun. Ihr solltet jetzt schleunigst den Pilzbiestingern Bescheid geben!"
+0
+LOC
+10
+1
+0
+
+// Kroekelbrueck revisited
+EV50
+Als Ihr gerade frohen Mutes auf den Klorkelruecker Dorfplatz zurueckschlendern wollt, vernehmt Ihr Saebelgerassel!
+0
+EV
+51
+0
+0
+
+EV51
+Als Ihr um die Ecke zum Dorfplatz biegt, seht Ihr es auch schon: Ein Kampf Zwei gegen Eins! Zwar scheint der Einzelgaenger geschickt und kraeftig, gegen zwei Widersacher gleichzeitig scheint er jedoch mehr und mehr die Oberhand zu verlieren...
+0
+EV
+52
+0
+0
+
+EV52
+"Heda, Ihr dort drueben!", ruft er Euch zu. "Ihr seht aus, als koenntet Ihr mit einer Waffe umgehen! Kommt schon, helft einem alten Seebaeren, diese Schurken aus unserem schoenen Klorkelrueck zu vertreiben!"
+0
+EV
+53
+0
+0
+
+EV53
+Irgendwie spuert Ihr, dass Ihr dem Mann vertrauen koennt. Als waschechter Abenteurer zueckt Ihr Euer Schwert und stellt Euch dem Kampf!
+0
+CBT
+3
+1
+0
+
+EV54
+Ihr naehert euch dem kraeftigen Mann, mit dem Ihr eben noch Seite an Seite gekaempft habt. Er lacht Euch zu: "Hehe, ein guter Kampf! Gegen uns beiden hatten diese Lumpen keine Chance! Kapitaen Burheimer mein Name! Sagt mir, wie kann ich mich fuer Eure Unterstuetzung erkenntlich zeigen?"
+0
+EV
+55
+0
+0
+
+EV55
+Als Ihr das Wort "Kapitaen" hoert, koennt Ihr Euer Glueck kaum fassen! Genau das, was der Pilzbiestingerbande fuer Ihr Moechtegernpiratenabenteuer noch fehlt! Ohne grosses Drumherum sprecht Ihr Kapitaen Burheimer auf Eure Aufgabe an...
+0
+EV
+56
+0
+0
+
+EV56
+Er lacht lauthals auf: "Eins muss ich Euch lassen, Ihr habt Humor! Ihr wollt, dass ich das Waldgemuese einen Tag lang auf dem Meer durch die Gegend kutsche und das passende Schiff habt Ihr auch schon? Wisst Ihr was? Warum nicht! Ich mache mich gleich auf den Weg zur Hoehle. Holt Ihr nur unsere Passagiere ab!"
+0
+EV
+57
+0
+1
+
+EV57
+Als Ihr den immer noch lachenden Kapitaen auf dem Weg zur Schiffshoehle verschwinden seht, beschliesst Ihr, seiner Aufforderung zu folgen und begebt euch so gleich auf die Biestingerlichtung...
+0
+LOC
+9
+1
+0
+
+EV58
+So langsam habt Ihr die Nase voll von den ganzen Botengaengen der Pilzbiestinger! Da Ihr darauf hofft, dass es sich hierbei nun wirklich um das letzte Stueck Weg zur Erfuellung des Auftrages handelt, zieht Ihr direkt los zuerueck nach Klorkelrueck...
+0
+LOC
+14
+1
+0
+
+EV70
+Als Ihr Euch dem Laubhaufen mit den Buescheln naehert, faengt er an zu zittern! Vorsichtig raeumt Ihr ein paar der Blaetter zur Seite. Zu Eurer Ueberraschung taucht eine junge, leicht verletzte Marder Biestingerin darunter auf und faengt an zu sprechen!
+0
+EV
+71
+0
+0
+
+EV71
+"Bitte tut mir nichts! Meine Name ist Riiba. Ich wollte euch nicht bestehlen ehrlich! Nur mal gucken, was Ihr sonst noch so in Eurem Geldbeutel habt, wirklich!" Vor euch sitzt anscheinend die Diebin aus der Taverne!
+0
+EV
+72
+0
+0
+
+EV72
+"Bitte, ich wollte euch das Zeug ja zurueckbringen! Leider hat mich unterwegs einer dieser finsteren Banditen erwischt und ist mit Eurem Gold abgehauen! In Richtung der Kuestenhoehle! Mehr weiss ich nicht, ich schwoere es!" Ihr koennt gar nicht so schnell zupacken, da ist Riiba Euch auch schon entwischt...
+0
+LOC
+9
+1
+1
+
+EV73
+Ausser ein paar Fellbuescheln und einem Laubhaufen gibt es hier nichts weiter zu sehen...
+0
+LOC
+9
+1
+0 
+
+
+EV80
+Ihr werft nur einen kurzen Blick auf die Tische... Im Gegensatz zu anderen habt ihr aus euren Fehlern gelernt und wendet euch wieder ab...
+0
+LOC
+1
+1
+0
+
+EV81
+Niemand hier weckt mehr Euer Interesse, nachdem Verian veschwunden ist...
+0
+LOC
+1
+1
+0
 
 ### Ende ###
 EV99
-So geht ein weiterer deiner Abenteurertage erfolgreich zu Ende! Vielen Dank fuers Spielen!
+So geht ein weiterer Eurer Abenteurertage erfolgreich zu Ende! Was Euch auf See mit dem drolligen Pilzkollektiv erwartet? Wer weiss das schon ;)... Vielen Dank fuers Spielen!
+0
+EV
+0
+1
 0
 
 
