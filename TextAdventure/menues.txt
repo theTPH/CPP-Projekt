@@ -9,7 +9,7 @@ END
 LOCATION_MENU
 2
 Was moechtet Ihr tun?
-1: Nach Gespreachsmoeglichkeiten in der Umgebung umschauen
+1: Nach Gespraechsmoeglichkeiten in der Umgebung umschauen
 2: Bewegen
 3: Nach anderen Auffaelligkeiten Ausschau halten
 4: Spielmenue oeffnen
